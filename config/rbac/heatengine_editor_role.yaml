@@ -1,0 +1,24 @@
+# permissions for end users to edit heatengines.
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRole
+metadata:
+  name: heatengine-editor-role
+rules:
+- apiGroups:
+  - heat.openstack.org
+  resources:
+  - heatengines
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - heat.openstack.org
+  resources:
+  - heatengines/status
+  verbs:
+  - get

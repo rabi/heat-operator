@@ -1,0 +1,28 @@
+domain: openstack.org
+layout:
+- go.kubebuilder.io/v3
+plugins:
+  manifests.sdk.operatorframework.io/v2: {}
+  scorecard.sdk.operatorframework.io/v2: {}
+projectName: heat-operator
+repo: github.com/openstack-k8s-operators/heat-operator
+resources:
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: openstack.org
+  group: heat
+  kind: HeatApi
+  path: github.com/openstack-k8s-operators/heat-operator/api/v1beta1
+  version: v1beta1
+- api:
+    crdVersion: v1
+    namespaced: true
+  controller: true
+  domain: openstack.org
+  group: heat
+  kind: HeatEngine
+  path: github.com/openstack-k8s-operators/heat-operator/api/v1beta1
+  version: v1beta1
+version: "3"

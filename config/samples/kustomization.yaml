@@ -1,0 +1,5 @@
+## Append samples you want in your CSV to this file as resources ##
+resources:
+- heat_v1beta1_heatapi.yaml
+- heat_v1beta1_heatengine.yaml
+#+kubebuilder:scaffold:manifestskustomizesamples
